@@ -31,21 +31,13 @@ namespace GestaoAlojamento2
 
                 Console.WriteLine("Quantidade de Quartos: ");
                 int qtdQuartos = Int32.Parse(Console.ReadLine());
-
+                            
                 Hotel novoHotel = new Hotel(nomeHotel, qtdQuartos, nomeSistema);
 
                 HotelBLL hotelBLL = new HotelBLL();
                 hotelBLL.AdicionarHotel(novoHotel);
                 Console.WriteLine($"Hotel Adicionado a {nomeSistema}");
             }
-
-
-
         }
-
-        
-        
-
-
     }
 }

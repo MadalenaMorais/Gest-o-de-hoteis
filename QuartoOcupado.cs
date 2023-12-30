@@ -8,9 +8,15 @@ namespace GestaoAlojamento2
 {
     public class QuartoOcupado : Quarto
     {
-        public QuartoOcupado(int idQuarto, string nomeHotel, int preco, string nomeCliente, int qtdNoites) : base(idQuarto, nomeHotel)
+        public int Preco;
+        public string NomeCliente;
+        public int QtdNoites;
+        public QuartoOcupado(int idQuarto, string nomeHotel, string nomeCliente, int qtdNoites) : base(idQuarto, nomeHotel)
         {
-            
+            Preco= 60;
+            NomeCliente= nomeCliente;
+            QtdNoites= qtdNoites;
+            EDisponivel = false;
         }
     }
 }

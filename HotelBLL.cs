@@ -43,18 +43,20 @@ namespace GestaoAlojamento2
         }
 
         //Eliminar um hotel em específico
-        public void ElimnarHotel(string nomeHotel)
+        public void EliminarHotel(string nomeHotel)
         {
             var listaHotel = DesserializarHotel ();
             
             for (int i = 0; i < listaHotel.Count; i++)
             {
                 Hotel hotelAux = listaHotel[i];
-                if(hotelAux.NomeHotel == nomeHotel)
+                if (hotelAux.NomeHotel == nomeHotel)
                 {
                     listaHotel.RemoveAt(i);
-                    alojamentoDAL.SerializarHoteis (listaHotel);
+                    alojamentoDAL.SerializarHoteis(listaHotel);
+                    Console.WriteLine("Hotel eliminado com sucesso!");
                 }
+
             }
         }
 
@@ -68,8 +70,9 @@ namespace GestaoAlojamento2
                 
                 if (hotelAux.NomeSistema == nomeSistema)
                 {
-                    listaHotel.RemoveAt(i);   
-                }                
+                    listaHotel.RemoveAt(i);
+                    Console.WriteLine("Sistema eliminado com sucesso!");
+                }
             }
 
             alojamentoDAL.SerializarHoteis(listaHotel);
